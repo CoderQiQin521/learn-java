@@ -13,13 +13,36 @@ public class VariableTypeTest {
         // double d1 = 12312312.12312312321;
         // char c1 = '你';
         // System.out.println(c1);
-        byte c = 5;
-        c = (byte) (c + 2); //
-        c += 4; // 9 short
-        System.out.println(c);
+        // byte c = 5;
+        // c = (byte) (c + 2); //
+        // c += 4; // 9 short
+        // System.out.println(c);
 
-        int n = 10;
-        n += (n++) + (++n);
-        System.out.println(n);
+        // int n = 10;
+        // n += (n++) + (++n);
+        // int n1 = 12;
+        // int n2 = 30;
+        // int n3 = -43;
+        // int max1 = n1 > n2 ? n1 : n2;
+        // int max2 = max1 > n3 ? max1 : n3;
+        // System.out.println(max2);
+
+        boolean x = true;
+        boolean y = false;
+        short z = 40;
+        if ((z++ == 40) && (y = true)) {
+            // true true
+            z++; // 41
+            // 42
+        }
+
+        if ((x = false) || (++z == 43)) {
+            // false true
+            z++;
+            // 44
+        }
+
+        System.out.println("z = " + z);
+
     }
 }
