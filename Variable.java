@@ -1,3 +1,6 @@
+// 先声明再调用
+// 作用域在{}内
+// 同一个作用域内,不能定义重名的变量
 public class Variable {
     static int allClicks = 0;
     static int aa = 3131;
