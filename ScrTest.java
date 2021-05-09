@@ -2,27 +2,13 @@ import java.util.Scanner;
 
 class ScrTest {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("请输入m: ");
-        int m = scan.nextInt();
-        System.out.println("请输入n: ");
-        int n = scan.nextInt();
+        for (int i = 100; i < 1000; i++) {
+            int b = i / 100;
+            int s = i % 100 / 10;
+            int g = i % 100 % 10;
+            if (b * b * b + s * s * s + g * g * g == i) {
+                System.out.println("水仙花数: " + i);
 
-        // 最大公约数
-        int min = (m > n) ? n : m;
-        for (int i = min; i >= 1; i--) {
-            if (m % i == 0 && n % i == 0) {
-                System.out.println("最大公约数: " + i);
-                break;
-            }
-        }
-
-        // 最小公倍数
-        int max = m > n ? m : n;
-        for (int i = max; i <= (m * n); i++) {
-            if (i % m == 0 && i % n == 0) {
-                System.out.println("最小公倍数: " + i);
-                break;
             }
         }
     }
