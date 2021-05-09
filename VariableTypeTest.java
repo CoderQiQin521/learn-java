@@ -44,5 +44,12 @@ public class VariableTypeTest {
 
         System.out.println("z = " + z);
 
+        double d1 = 12.3;
+        double d2 = 32.1;
+        if (d1 > 10.0 && d2 < 20.0) {
+            System.out.println(d1 + d2);
+        } else {
+            System.out.println(d1 * d2);
+        }
     }
 }
