@@ -1,15 +1,20 @@
 import java.util.Scanner;
 
 class ScrTest {
+    // 质数 又叫素数 只能被1和它本身整除的自然数
     public static void main(String[] args) {
-        for (int i = 100; i < 1000; i++) {
-            int b = i / 100;
-            int s = i % 100 / 10;
-            int g = i % 100 % 10;
-            if (b * b * b + s * s * s + g * g * g == i) {
-                System.out.println("水仙花数: " + i);
-
+        for (int i = 2; i < 100; i++) {
+            boolean b = true;
+            for (int j = 2; j <= Math.sqrt(i); j++) { // 被除数
+                if (i % j == 0) { // 非质数 退出循环
+                    b = false;
+                    break;
+                }
             }
+            if (b) {
+                System.out.println(i);
+            }
+            // b = true;
         }
     }
 }
